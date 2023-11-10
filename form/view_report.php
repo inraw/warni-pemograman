@@ -1,4 +1,9 @@
 <?php
+    if (!isset($_SESSION['nama'])) {
+        header('location: ../index.php'); // Redirect to the login page if not logged in
+        exit(); }
+?>
+<?php
     include 'config/koneksi.php';
     $query = "SELECT
     m.nama_member AS Member,

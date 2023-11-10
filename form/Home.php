@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,22 +17,22 @@
     <hr>
     <table>
         <tr>
-            <td><a href="user/list_user.php"><button>User</button></a></td>
+            <td><a href="list_user.php"><button>User</button></a></td>
         </tr>
         <tr>
-            <td><a href="Barang/list_barang.php"><button>Barang</button></a></td>
+            <td><a href="list_barang.php"><button>Barang</button></a></td>
         </tr>
         <tr>
-            <td><a href="Transaksi/list_transaksi.php"><button>Transaksi</button></a></td>
+            <td><a href="list_transaksi.php"><button>Transaksi</button></a></td>
         </tr>
         <tr>
-            <td><a href="Kategori/list_kategori.php"><button>Kategori</button></a></td>
+            <td><a href="list_kategori.php"><button>Kategori</button></a></td>
         </tr>
         <tr>
-            <td><a href="member/list_member.php"><button>Member</button></a></td>
+            <td><a href="list_member.php"><button>Member</button></a></td>
         </tr>
         <tr>
-            <td><a href="penjualan/list_penjualan.php"><button>Penjualan</button></a></td>
+            <td><a href="list_penjualan.php"><button>Penjualan</button></a></td>
         </tr>
     </table>
 </body>
