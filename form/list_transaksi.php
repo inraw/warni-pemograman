@@ -2,20 +2,27 @@
     if (!isset($_SESSION['nama'])) {
         header('location: ../index.php'); // Redirect to the login page if not logged in
         exit(); }
-?>
+        include '../config/koneksi.php';
+        $level = $_SESSION['level'];
+    $edit_hapus_visible = true;
+
+    if ($level == 4) {
+        // Jika pengguna memiliki level 4, opsi Edit dan Hapus tidak ditampilkan
+        $edit_hapus_visible = false;
+    }
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>List Transaksi</title>
+    <link rel="stylesheet" href="../Config/table.css">
 </head>
 <body>
     <h2>Pemograman 1 2023</h2>
     <br>
-    <a href="../Home.html">Home</a>
+    <a href="?page=ltransaksi">+ Tambah Transaksi</a>
     <br>
-    <a href="tambah_transaksi.php">+ Tambah Transaksi</a>
-    <br>
-    <table border="1">
+    <table border="1" class="styled-table">
         <tr>
             <th>Id</th>
             <th>Tanggal Transaksi</th>
@@ -43,10 +50,12 @@
             <td><?php echo $d['jumlah_transaksi'];?></td>
             <td><?php echo $d['member_id'];?></td>
             <td><?php echo $d['total'];?></td>
+            <?php if ($edit_hapus_visible): ?>
             <td>
                 <a href="edit_transaksi.php?id=<?php echo $d['id_transaksi']; ?>">Edit</a>
                 <a href="hapus_transaksi.php?id=<?php echo $d['id_transaksi']; ?>">Hapus</a>
             </td>
+            <?php endif; ?>
         </tr>
         <?php
             }

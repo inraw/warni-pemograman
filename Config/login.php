@@ -17,7 +17,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $_SESSION['nama'] = $row['nama'];
         $_SESSION['level'] = $row['level'];
 
-        header('location: ../form/home.php'); // Redirect to the welcome page
+        header('location: form.php?page=home'); // Redirect to the welcome page
     } else {
         $_SESSION['error_message'] = "*Gagal Login. Username atau Password salah.";
         header('location: ../index.php'); // Redirect back to the login page

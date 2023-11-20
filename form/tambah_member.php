@@ -19,7 +19,7 @@
         $a = mysqli_query($koneksi,"insert into member values('','$Nama','$level')");
         if($a){
             //mengalihkan halaman kembali
-            header("location:list_member.php");
+            header("location:?page=member");
         }else{
             echo mysqli_error();
         }
@@ -28,9 +28,9 @@
 <body>
     <h2>Pemograman 1 2023</h2>
     <br>
-    <a href="list_member.php">Kembali</a>
+    <a href="?page=member">Kembali</a>
     <br><br>
-    <h3>TAMBAH DATA BARANG</h3>
+    <h3>TAMBAH DATA MEMBER</h3>
     <form method="POST">
         <table>
             <tr>

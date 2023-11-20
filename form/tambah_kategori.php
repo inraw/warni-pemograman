@@ -14,11 +14,12 @@
     //Menangkap data yang dikirim dari form
     if(!empty($_POST['save'])){
         $Nama = $_POST['nama_kategori'];
+        $Diskon = $_POST['diskon'];
         //menginput data ke database
-        $a = mysqli_query($koneksi,"insert into kategori values('','$Nama')");
+        $a = mysqli_query($koneksi,"insert into kategori values('','$Nama', $Diskon)");
         if($a){
             //mengalihkan ke halaman kembali
-            header("location:list_kategori.php");
+            header("location:?page=kategori");
         }else{
             echo mysqli_error();
         }
@@ -27,7 +28,7 @@
 <body>
     <h2>Pemograman 1 2023</h2>
     <br>
-    <a href="list_kategori.php">Kembali</a>
+    <a href="?page=kategori">Kembali</a>
     <br>
     <h3>TAMBAH DATA KATEGORI</h3>
     <form method="POST">
@@ -35,6 +36,10 @@
             <tr>
                 <td>Nama Kategori</td>
                 <td><input type="text" name="nama_kategori"></td>
+            </tr>
+            <tr>
+                <td>Diskon</td>
+                <td><input type="number" name="diskon"></td>
             </tr>
             <tr>
                 <td></td>

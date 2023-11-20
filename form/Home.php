@@ -17,7 +17,7 @@
     <hr>
     <table>
         <tr>
-            <td><a href="list_user.php"><button>User</button></a></td>
+            <td><a href="?page=user"><button>User</button></a></td>
         </tr>
         <tr>
             <td><a href="list_barang.php"><button>Barang</button></a></td>

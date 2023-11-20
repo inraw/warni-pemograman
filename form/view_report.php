@@ -4,7 +4,7 @@
         exit(); }
 ?>
 <?php
-    include 'config/koneksi.php';
+    include '../config/koneksi.php';
     $query = "SELECT
     m.nama_member AS Member,
     m.level AS Level,
@@ -65,10 +65,11 @@ $result = $koneksi->query($query);
 <html>
 <head>
     <title>Hasil Transaksi</title>
+    <link rel="stylesheet" href="../Config/table.css">
 </head>
 <body>
     <h1>Hasil Transaksi</h1>
-    <table border="1">
+    <table border="1" class="styled-table">
         <tr>
             <th>Member</th>
             <th>Level</th>
